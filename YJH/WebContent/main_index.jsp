@@ -202,8 +202,6 @@ if (next_month < 1) {
 							subject=rs.getString("CAL_SUBJECT");
 								}
 							} catch (SQLException e) {
-							} finally {
-								rs.close();
 							}
 
 							if (id > 0) {

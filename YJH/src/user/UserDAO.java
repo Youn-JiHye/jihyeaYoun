@@ -15,11 +15,16 @@ public class UserDAO {
 
 	public UserDAO() {
 		try {
-			String driverName = "oracle.jdbc.driver.OracleDriver";
+			String driverName="com.mysql.cj.jdbc.Driver";
+			String dbURL="jdbc:mysql://localhost:3306/YJH?serverTimezone=UTC";
+			String dbID="root";
+			String dbPassword="0208";
+			
+			/*String driverName = "oracle.jdbc.driver.OracleDriver";
 			String dbURL = "jdbc:oracle:thin:@localhost:1521:yjh";
 			String dbID = "yjh";
-			String dbPassword = "6906";
-
+			String dbPassword = "6906"; oracle에서 mysql로 DB 변경
+			 */
 			Class.forName(driverName);
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
 
@@ -36,15 +41,6 @@ public class UserDAO {
 
 	public Connection getConnection() {
 		return conn;
-	}
-
-	public void close() {
-		try {
-			if(!conn.isClosed()) {
-				conn.close();
-			}
-		} catch (SQLException e) {
-		}
 	}
 
 	public int join(user user) {

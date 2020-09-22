@@ -19,8 +19,6 @@
 		query = "delete from YJH_CALENDAR where id=" + id;
 		stmt.executeUpdate(query);
 	} catch(SQLException e){
-	} finally {
-		dbconn.close();
 	}
 	
 	response.sendRedirect("main_index.jsp");

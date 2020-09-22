@@ -2,7 +2,7 @@ package user;
 
 import java.sql.DriverManager; 
 import java.sql.SQLException;
-public class OracleEx01 {
+public class OracleEx {
 	public static void main(String[] args) {
     String driver = "oracle.jdbc.driver.OracleDriver";
     String url = "jdbc:oracle:thin:@localhost:1521:yjh";
