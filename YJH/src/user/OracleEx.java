@@ -10,13 +10,13 @@ public class OracleEx {
     
     try { 
     	Class.forName(driver);
-    	System.out.println("jdbc driver ·Îµù ¼º°ø");
+    	System.out.println("jdbc driver ì—°ê²°ì„±ê³µ");
     	DriverManager.getConnection(url, user, password);
-    	System.out.println("¿À¶óÅ¬ ¿¬°á ¼º°ø"); 
+    	System.out.println("ì˜¤ë¼í´ ì—°ê²° ì„±ê³µ"); 
     } catch (ClassNotFoundException e) {
-      	System.out.println("jdbc driver ·Îµù ½ÇÆĞ"); 
+      	System.out.println("jdbc driver ì—°ê²° ì‹¤íŒ¨"); 
     } catch (SQLException e) {
-    	System.out.println("¿À¶óÅ¬ ¿¬°á ½ÇÆĞ");
+    	System.out.println("ì˜¤ë¼í´ ì—°ê²° ì„±ê³µ");
     }
   } 
 }
